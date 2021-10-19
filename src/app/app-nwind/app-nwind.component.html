@@ -1,0 +1,12 @@
+<igx-grid [data]="northwindCustomers" [allowFiltering]="true" filterMode="excelStyleFilter" [autoGenerate]="false" width="1381px" height="859px" displayDensity="cosy" primaryKey="customerID" class="grid">
+  <igx-column field="customerID" header="customerID" title="customerID" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="companyName" header="companyName" title="companyName" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="contactName" header="contactName" title="contactName" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="contactTitle" header="contactTitle" title="contactTitle" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="address.street" header="street" title="address.street" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="address.city" header="city" title="address.city" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="address.region" header="region" title="address.region" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="address.postalCode" header="postalCode" title="address.postalCode" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="address.country" header="country" title="address.country" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="address.phone" header="phone" title="address.phone" dataType="string" [sortable]="true"></igx-column>
+</igx-grid>
