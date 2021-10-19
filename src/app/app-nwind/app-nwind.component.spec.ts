@@ -1,25 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { IgxGridModule, IgxActionStripModule } from 'igniteui-angular';
-import { MasterViewComponent } from './master-view.component';
+import { AppNwindComponent } from './app-nwind.component';
 
-describe('MasterViewComponent', () => {
-  let component: MasterViewComponent;
-  let fixture: ComponentFixture<MasterViewComponent>;
+describe('AppNwindComponent', () => {
+  let component: AppNwindComponent;
+  let fixture: ComponentFixture<AppNwindComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MasterViewComponent ],
-      imports: [ NoopAnimationsModule, FormsModule, HttpClientTestingModule, IgxGridModule, IgxActionStripModule ]
+      declarations: [ AppNwindComponent ],
+      imports: [ NoopAnimationsModule, FormsModule, IgxGridModule, IgxActionStripModule ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MasterViewComponent);
+    fixture = TestBed.createComponent(AppNwindComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
