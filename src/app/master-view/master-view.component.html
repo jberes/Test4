@@ -1,5 +1,6 @@
 <div class="row-layout row">
-  <igx-grid [data]="northwindRestServiceCustomers" [allowFiltering]="true" filterMode="excelStyleFilter" [autoGenerate]="false" height="100%" displayDensity="cosy" primaryKey="CustomerID" class="grid">
+  <igx-grid [data]="northwindRestServiceCustomers" rowSelection="single" [hideRowSelectors]="true" (rowSelected)="rowSelected($event.newSelection)"
+    [allowFiltering]="true" filterMode="excelStyleFilter" [autoGenerate]="false" height="100%" displayDensity="cosy"  class="grid">
     <igx-column field="CustomerID" header="CustomerID" title="CustomerID" dataType="string" [sortable]="true"></igx-column>
     <igx-column field="CompanyName" header="CompanyName" title="CompanyName" dataType="string" [sortable]="true"></igx-column>
     <igx-column field="ContactName" header="ContactName" title="ContactName" dataType="string" [sortable]="true"></igx-column>
@@ -12,6 +13,22 @@
     <igx-column field="Fax" header="Fax" title="Fax" dataType="string" [sortable]="true"></igx-column>
   </igx-grid>
 </div>
+<!--
+<igx-grid [data]="northwindRestServiceCustomers" rowSelection="single" [hideRowSelectors]="true" (rowSelected)="rowSelected($event.newSelection)"  
+[allowFiltering]="true" filterMode="excelStyleFilter" [autoGenerate]="false" height="100%" displayDensity="cosy" primaryKey class="grid">
+  <igx-column field="CustomerID" header="CustomerID" title="CustomerID" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="CompanyName" header="CompanyName" title="CompanyName" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="ContactName" header="ContactName" title="ContactName" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="ContactTitle" header="ContactTitle" title="ContactTitle" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="Address" header="Address" title="Address" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="City" header="City" title="City" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="Region" header="Region" title="Region" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="Country" header="Country" title="Country" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="Phone" header="Phone" title="Phone" dataType="string" [sortable]="true"></igx-column>
+  <igx-column field="Fax" header="Fax" title="Fax" dataType="string" [sortable]="true"></igx-column>
+</igx-grid>
+</div>
+-->
 <div class="row-layout row">
   <igx-grid [data]="northwindRestServiceOrders" [allowFiltering]="true" filterMode="excelStyleFilter" [autoGenerate]="false" width="100%" height="100%" displayDensity="cosy" primaryKey="OrderID" class="grid_1">
     <igx-column field="OrderID" header="OrderID" title="OrderID" dataType="number" [sortable]="true"></igx-column>
